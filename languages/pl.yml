@@ -1,7 +1,7 @@
 language:
   name: "Polish"
   locale: "pl"
-  version: "2.4.12"
+  version: "3.0.0"
   author: "Trust"
 logging:
   banned: ":airplane_departure: %s **zbanowany/a.**"
@@ -187,6 +187,12 @@ label:
   shuffle: "Losuj"
   loop: "Pętla"
   loading: "Ładowanie"
+  blackJackWin: "Wygrana BlackJack"
+  musicQuizWin: "Wygrana MusicQuiz"
+  musicQuizFeatureGuess: "Funkcja Odgadnięcia MusicQuiz"
+  musicQuizArtistGuess: "Odgadanie artysty MusicQuizu"
+  musicQuizTitleGuess: "Odgadnięcie tytułu MusicQuiz"
+  rewards: "Nagrody"
 message:
   default:
     usage: "Użycie {guild_prefix}%s."
@@ -217,6 +223,7 @@ message:
       date: "Proszę użyć poprawnej daty!\nZauważ, że używamy formatu dd.mm.rrrr (dzień.miesiąc.rok)!"
       time: "Proszę użyć poprawnego czasu!\nPamiętaj, że używamy formatu HH/mm (godzina/minuta (24-godziny))!"
       notEnough: "Wprowadzony czas nie wystarczy!"
+    incorrectNumbers: "Wprowadź poprawne wartości liczbowe"
   birthday:
     added:
       self: "Twoje urodziny zostały dodane!"
@@ -226,6 +233,7 @@ message:
       self: "Twoje urodziny zostały usunięte!"
       other: "Urodziny %s zostały usunięte!"
       noPerms: "Nie masz uprawnień do usunięcia urodzin!"
+    wish: "Wszystkiego najlepszego z okazji urodzin, <@%s>!"
   instagramNotifier:
     added: "Powiadomienie o Instagramie zostało utworzone dla użytkownika %s!"
     list: "Tutaj są wszystkie powiadomienia o Instagram'u, które zostały skonfigurowane:\n```%s```"
@@ -537,9 +545,28 @@ message:
   pickupline:
     response: ":speaking_head: %s"
     responseNsfw: ":red_circle: ||%s|| **NSFW**"
+  money:
+    notEnoughMoney: "Nie masz wystarczającej ilości pieniędzy do tego działania!"
+    withdraw: "Wycofano %s$!"
+    deposit: "Wpłacono %s$!"
+    send: "Wysłano %s$ do %s!"
+    balance: "Saldo %s zawiera %s$ w gotówce i %s$ w banku!"
+  steal:
+    success: "Pomyślnie skradziłeś/aś %s$ od %s!"
+    failed: "Nie udało Ci się ukraść %s$ od %s!"
+    cooldown: "Masz czas schłodzenia! Możesz kradnąc ponownie za %s sekund."
+    self: "Nie możesz ukradnąć od siebie!"
+    notEnoughMoney: "%s nie ma wystarczającej ilości pieniędzy!"
+  work:
+    success: "Pomyślnie pracowałeś/aś i zdobyłeś/aś %s$!"
+    cooldown: "Masz czas schłodzenia! Możesz pracować ponownie za %s sekund."
+    failed: "Nie udało Ci się pracować!"
+  rewards:
+    success: "Zaktualizowano nagrody!"
 game:
   description:
     blackjack: "Zagraj w Blackjack z przyjaciółmi!"
+    musicquiz: "Zagraj w Quiz oparty na muzyce z przyjaciółmi!"
 command:
   perform:
     cooldown: "Masz się ostudzić!"
@@ -631,9 +658,11 @@ command:
     levelrole: "Zarządzaj automatycznymi rolami dla poziomów głosu lub tekstu!"
     warn: "Ostrzegaj użytkownika i pozwól im być karani automatycznie."
     infractions: "Pokaż wszystkie ostrzeżenia użytkownika."
-    musicquiz: "Zagraj z przyjaciółmi grę w Quiz!"
     musicpanel: "Uzyskaj dostęp do prostego interfejsu użytkownika, aby zarządzać systemem muzycznym!"
     schedule: "Zaplanuj wiadomości na później lub na powtarzający się czas!"
+    money: "Zarządzaj pieniędzmi!"
+    steal: "Ukradnij pieniądze od innych użytkowników!"
+    work: "Zdobądź własne pieniądze za pracę!"
 category:
   info: "Wykorzystywane do gromadzenia informacji lub przekazywania informacji."
   moderation: "Narzędzia moderacyjne, które mogą pomóc ci zarządzać użytkownikami lub zapobiec łamania zasad na serwerze."
@@ -641,5 +670,6 @@ category:
   fun: "Zabawne narzędzia, które dają ci możliwość zrobienia rzeczy, bo możesz!"
   level: "Narzędzia do poziomowania, które pozwalają śledzić postępy na serwerze."
   community: "Narzędzia społeczności, które umożliwiają ci interakcję z twoją społecznością."
+  economy: "Narzędzia ekonomiczne, które umożliwiają zarządzanie pieniędzmi."
   nsfw: "Narzędzia NSFW, których możesz używać tylko w kanałach NSFW."
   hidden: "Ukryte komendy, które są widoczne tylko dla właściciela bota."

@@ -1,7 +1,7 @@
 language:
   name: "Indonesia"
   locale: "id"
-  version: "2.4.12"
+  version: "3.0.0"
   author: "Gorengan_Hunter, SpyCat"
 logging:
   banned: ":airplane_departure: %s **telah diban.**"
@@ -187,6 +187,12 @@ label:
   shuffle: "Acak"
   loop: "Ulang"
   loading: "Loading"
+  blackJackWin: "Menang BlackJack"
+  musicQuizWin: "Menang MusicQuiz"
+  musicQuizFeatureGuess: "Menebak Fitur MusicQuiz"
+  musicQuizArtistGuess: "Menebak Artis MusicQuiz"
+  musicQuizTitleGuess: "Menebak Judul MusicQuiz"
+  rewards: "Hadiah"
 message:
   default:
     usage: "Penggunaan {guild_prefix}%s."
@@ -217,6 +223,7 @@ message:
       date: "Harap gunakan tanggal yang valid!\nPerhatikan bahwa kami menggunakan format dd.MM.yyyy (day.month.year)!"
       time: "Harap gunakan waktu yang valid!\nPerhatikan bahwa kami menggunakan format HH/mm (jam/menit (24-jam))!"
       notEnough: "Waktu yang dimasukkan tidak cukup!"
+    incorrectNumbers: "Tolong masukkan angka yang benar"
   birthday:
     added:
       self: "Ulang Tahun mu telah ditambahkan!"
@@ -226,6 +233,7 @@ message:
       self: "Ulang Tahun mu telah dihapus!"
       other: "Ulang Tahun %s telah dihapus!"
       noPerms: "Kamu tidak punya izin untuk menghapus Ulang Tahun!"
+    wish: "Selamat ulang tahun  <@%s>!"
   instagramNotifier:
     added: "Pemberitahuan Instagram telah dibuat untuk %s!"
     list: "Dibawah ini daftar Notifier Instagram yang telah disetup:\n```%s```"
@@ -469,7 +477,7 @@ message:
     error: "Sesuatu ada yang salah saat membenarkan audiomu!\nAlasan: %s"
   reactions:
     roleAssign: "Kamu telah menambahkan Role %s ke Reaction!"
-    reactionNeeded: "Kamu harus reaksi ke pesanya dengan reaksi yang kamu mau tambahkan %s!"
+    reactionNeeded: "Kamu harus react ke message ini dengan reaction yang kamu mau berikan ke %s!"
     roleNotFound: "Role yang kamu mau tambahkan tidak ada!"
     removed: "Telah menghapuskan Reaction-Role untuk role %s!"
     roleAdded: "Kamu telah mendapatkan role %s!"
@@ -537,9 +545,28 @@ message:
   pickupline:
     response: ":speaking_head: %s"
     responseNsfw: ":red_circle: ||%s|| **NSFW**"
+  money:
+    notEnoughMoney: "Kamu tidak punya uang untuk ini!"
+    withdraw: "Kamu telah berhasil menarik %s$!"
+    deposit: "Kamu telah berhasil menyimpan %s$!"
+    send: "Kamu telah berhasil memberikan %s$ ke %s!"
+    balance: "Saldo %s berisi %s$ berupa tunai dan %s$ di bank!"
+  steal:
+    success: "Kamu telah berhasil mencuri %s$ dari %s!"
+    failed: "Kamu tidak berhasil untuk mencuri %s$ dari %s!"
+    cooldown: "Kamu masih ada cooldown! Kamu bisa mencuri lagi sekitar %s detik."
+    self: "Kamu tidak bisa mencuri barang kamu sendiri!"
+    notEnoughMoney: "%s tidak mempunyai uang cukup!"
+  work:
+    success: "Kamu telah berhasil bekerja dan mendapatkan %s$!"
+    cooldown: "Kamu masih ada cooldown! Kamu bisa bekerja lagi sekitar %s detik."
+    failed: "Kamu tidak berhasil kerja!"
+  rewards:
+    success: "Berhasil merubah hadiah!"
 game:
   description:
     blackjack: "Mainkan Blackjack dengan temanmu!"
+    musicquiz: "Main quiz dari musik dengan temanmu!"
 command:
   perform:
     cooldown: "Kamu masih di jeda!"
@@ -631,9 +658,11 @@ command:
     levelrole: "Atur AutoRoles untuk Voice atau Text levels!"
     warn: "Peringati user dan biarkan dia dihukum otomatis."
     infractions: "Tampilkan semua peringatan yang dimiliki user."
-    musicquiz: "Mainkan Kuis Musik dengan teman anda!"
     musicpanel: "Akses UI sederhana untuk mengelola Sistem Musik!"
     schedule: "Jadwalkan pesan untuk nanti atau untuk diulang!"
+    money: "Mengelola uangmu!"
+    steal: "Mencuri uang dari orang lain!"
+    work: "Dapatkan uangmu dari bekerja!"
 category:
   info: "Dipakai untuk mendapatkan informasi atau memberi informasi."
   moderation: "Alat moderasi untuk membantumu menjaga servermu!"
@@ -641,5 +670,6 @@ category:
   fun: "Utilitas seru yang bisa memberi kamu kekuatan untuk melakukan hal yang bodoh karena kamu bisa!"
   level: "Alat level untuk mengetahui progress kamu di server."
   community: "Alat komunitas yang bisa dipakai untuk interaksi dengan komunitas kamu."
+  economy: "Alat Ekonomi untuk mengelola uangmu."
   nsfw: "NSFW-NSFW yang hanya bisa digunakan di channel NSFW."
   hidden: "Command rahasia yang hanya bisa terlihat untuk Pemilik Bot ini."

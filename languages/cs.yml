@@ -1,7 +1,7 @@
 language:
   name: "Czech"
   locale: "cs"
-  version: "2.4.12"
+  version: "3.0.0"
   author: "Pogy__"
 logging:
   banned: ":airplane_departure: %s **zablokován.**"
@@ -187,6 +187,12 @@ label:
   shuffle: "Zamíchat"
   loop: "Smyčka"
   loading: "Načítání"
+  blackJackWin: "Výhra v BlackJacku"
+  musicQuizWin: "Výhra v MusicQuiz"
+  musicQuizFeatureGuess: "Funkce MusicQuiz Guess"
+  musicQuizArtistGuess: "Uhádněte interpreta Hudební kvíz"
+  musicQuizTitleGuess: "Uhádni jméno Hudební kvíz"
+  rewards: "Odměny"
 message:
   default:
     usage: "Použití {guild_prefix}%s."
@@ -217,6 +223,7 @@ message:
       date: "Použijte platné datum!\nVezměte prosím na vědomí, že používáme formát dd.MM.yyyy (day.month.year)!"
       time: "Použijte prosím platný čas!\\nPamatuj, že používáme formát HH/mm (hodina/minuta)!"
       notEnough: "Zadaný čas nestačí!"
+    incorrectNumbers: "Zadejte správné hodnoty čísel"
   birthday:
     added:
       self: "Vaše narozeniny byly přidány!"
@@ -226,6 +233,7 @@ message:
       self: "Vaše narozeniny byly odstraněny!"
       other: "Narozeniny %s byly odstraněny!"
       noPerms: "Nemáte oprávnění k odstranění narozenin!"
+    wish: "Všechno nejlepší k narozeninám <@%s>!"
   instagramNotifier:
     added: "Bylo vytvořeno oznámení Instagram pro uživatele %s!"
     list: "Zde jsou všechny Instagram oznámení které byly nastaveny:\n```%s```"
@@ -469,7 +477,7 @@ message:
     error: "Něco se pokazilo při převodu tvého zvuku!\nDůvod: %s"
   reactions:
     roleAssign: "Přidělili jste roli %s k reakci!"
-    reactionNeeded: "Musíte reagovat na zprávu reakcí, ke které chcete přiřadit %s!"
+    reactionNeeded: "You must respond to this message with the reaction you want to assign %s!"
     roleNotFound: "Role kterou chcete přiřadit k reakci, nebyla nalezena!"
     removed: "Reakční role pro roli %s byla úspěšně odstraněna!"
     roleAdded: "Obdrželi jste roli %s!"
@@ -537,9 +545,28 @@ message:
   pickupline:
     response: ":speaking_head: %s"
     responseNsfw: "red_circle: ||%s|| **NSFW**"
+  money:
+    notEnoughMoney: "Nemáte dost peněz!"
+    withdraw: "Úspěšně jste vybrali %s$ z banky!"
+    deposit: "Úspěšně jste vložili %s$ do banky!"
+    send: "Úspěšně jste odeslali %s$ na adresu %s!"
+    balance: "Zůstatek %s obsahuje %s$ v hotovosti a %s$ v bance!"
+  steal:
+    success: "Úspěšně jste ukradli %s$ z %s!"
+    failed: "Nepodařilo se vám ukrást %s$ z %s!"
+    cooldown: "Znovu krást můžete přibližně za %s sekund."
+    self: "Nemůžeš okrást sám sebe!"
+    notEnoughMoney: "%s nemá dostatek peněz!"
+  work:
+    success: "Úspěšně jste pracovali a vydělali %s$!"
+    cooldown: "Znovu můžete pracovat přibližně za %s sekund."
+    failed: "Selhali jste v práci!"
+  rewards:
+    success: "Odměny byly úspěšně aktualizovány!"
 game:
   description:
     blackjack: "Hrajte Blackjack se svými přáteli!"
+    musicquiz: "Zahrajte si s přáteli kvízovou hru založenou na hudbě!"
 command:
   perform:
     cooldown: "Jste na ochlazení!"
@@ -631,9 +658,11 @@ command:
     levelrole: "Spravujte automatické role pro hlasové nebo textové úrovně!"
     warn: "Upozornit uživatele a nechat je potrestat automaticky."
     infractions: "Zobrazit všechna varování uživatele."
-    musicquiz: "Zahrajte si s přáteli hudební kvíz!"
     musicpanel: "Přístup k jednoduchému uživatelskému rozhraní pro správu hudebního systému!"
     schedule: "Naplánovat zprávy na později nebo na opakovaný čas!"
+    money: "Spravujte své peníze!"
+    steal: "Krást peníze ostatním uživatelům!"
+    work: "Získejte vlastní peníze z práce!"
 category:
   info: "Slouží ke shromažďování informací nebo poskytování informací."
   moderation: "Nástroje pro moderování, které vám mohou pomoci spravovat uživatele nebo zabránit porušení pravidel na serveru."
@@ -641,5 +670,6 @@ category:
   fun: "Zábavné nástroje, které vám dávají sílu dělat hloupé věci, protože můžete!"
   level: "Nástroje pro vyrovnávání, které vám umožňují sledovat pokrok na serveru."
   community: "Nástroje komunity, které vám umožní komunikovat s vaší komunitou."
+  economy: "Ekonomika Nástroje, které vám umožní spravovat peníze."
   nsfw: "Věci NSFW, které můžete použít pouze v kanálech NSFW."
   hidden: "Skryté příkazy, které vidí pouze majitel robota."
